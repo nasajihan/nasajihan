@@ -1,0 +1,182 @@
+<! DOCTYPE html>  
+<html>  
+    <head>  
+    <meta charset="utf-8">  
+    <title>  
+          
+    </title>  
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
+    <!-- CSS property to create interactive  
+        calculator interface -->  
+    <style>  
+body    
+{    
+background-color: rgb(48, 219, 211);    
+}    
+.box    
+{    
+background-color: #3779db;    
+height: 400px;    
+width: 300px;    
+border-radius: 10px;    
+position: relative;    
+top: 200px;    
+left: 30%;    
+}   
+.display    
+{    
+background-color: #d9dee0;    
+width: 260px;    
+position: relative;    
+left: 20px;    
+top: 20px;    
+height: 40px;    
+}    
+.display input    
+{    
+position: relative;    
+left: 2px;    
+top: 2px;    
+height: 35px;    
+color: rgb(32, 19, 206);    
+background-color: #bccd95;    
+font-size: 22px;    
+text-align: right;    
+}   
+.keys    
+{    
+position: relative;    
+top: 20px;    
+}    
+.button    
+{    
+width: 50px;    
+height: 50px;    
+border: none;    
+border-radius: 8px;    
+margin-left: 20px;    
+cursor: pointer;    
+border-top: 2px solid transparent;    
+}    
+.button.gray    
+{    
+color: rgb(223, 214, 214);  
+font: #000000;   
+background-color: #5a6bc9;    
+border-bottom: rgb(0, 0, 0) 2px solid;    
+border-top: 2px #070707 solid;    
+}  
+.title:hover {  
+   color: #fff;  
+}  
+.title {  
+margin-bottom: 10px;  
+margin-top: 30px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: rgb(10, 10, 10);  
+font-family: 'Cookie', cursive;  
+}  
+    
+.button.pink    
+{    
+color: rgb(228, 215, 215);    
+background-color: #dd1e1e;    
+border-bottom: rgb(0, 0, 0) 2px solid;    
+}    
+.button.black    
+{    
+color: rgb(216, 206, 206);    
+background-color: blue;    
+border-bottom: rgb(0, 0, 0) 2px solid;    
+border-top: 2px 303030 solid;    
+font-weight: bold;  
+}    
+.button.orange    
+{    
+color: rgb(5, 5, 5);    
+background-color: rgb(218, 241, 11);    
+border-bottom: black 2px solid;    
+border-top: 2px FF9933 solid;    
+}    
+.gray:active    
+{    
+border-top: rgb(12, 12, 12) 2px solid;    
+border-bottom: 2px #6f6f6f solid;    
+}    
+.pink:active    
+{    
+border-top:black 2px solid;    
+border-bottom:#d6112e 2px solid;    
+}    
+.black:active    
+{    
+border-top: rgb(0, 0, 0) 2px solid;    
+border-bottom: #806c6c 2px solid;    
+}    
+.orange:active    
+{    
+border-top: rgb(0, 0, 0) 2px solid;    
+border-bottom: FF9933 2px solid;    
+}    
+p    
+{    
+line-height: 10px;    
+}   
+</style>  
+</head>  
+<body>  
+    <div class = "title? align="centre">  
+        Calculator By Nasa Jihan Ananda  
+    </div>  
+    <div class="box">    
+        <div class="display">  
+        <input type="text" readonly size="18" id="d">  
+        </div>    
+        <div class="keys">    
+               <p> <input type="button" class="button gray" value="mrc" onclick='c("Created....................")'>  
+               <input type="button" class="button gray" value="m-" onclick='c("...............by............")'>  
+               <input type="button" class="button gray"    
+value="m+" onclick='c(".....................Anoop")'>  
+<input type="button" class="button pink" value="/" onclick='v("/")'> </p>    
+               <p> <input type="button" class="button black" value="7" onclick='v("7")'>  
+               <input type="button" class="button black" value="8" onclick='v("8")'>  
+               <input type="button" class="button black" value="9" onclick='v("9")'>  
+               <input type="button" class="button pink" value="*" onclick='v("*")'> </p>    
+               <p> <input type="button" class="button black" value="4" onclick='v("4")'>  
+               <input type="button" class="button black" value="5" onclick='v("5")'>  
+               <input type="button" class="button black" value="6" onclick='v("6")'>  
+<input type="button" class="button pink" value="-" onclick='v("-")'> </p>    
+               <p> <input type="button" class="button black" value="1" onclick='v("1")'>  
+               <input type="button" class="button black" value="2" onclick='v("2")'>  
+               <input type="button" class="button black" value="3" onclick='v("3")'>  
+               <input type="button" class="button pink" value="+" onclick='v("+")'> </p>    
+               <p> <input type="button" class="button black" value="0" onclick='v("0")'>   
+               <input type="button" class="button black" value="." onclick='v(".")'>  
+               <input type="button" class="button black" value="C" onclick='c("")'>  
+               <input type="button" class="button orange" value="=" onclick='e()'> </p>    
+        </div>    
+</div>   
+</body>  
+<script>  
+function c(val)    
+{    
+document.getElementById("d").value=val;    
+}    
+function v(val)    
+{document.getElementById("d").value+=val;    
+}    
+function e()    
+{    
+try    
+    {    
+     c(eval(document.getElementById("d").value))    
+    }    
+    catch(e)    
+    {    
+     c('Error') }    
+}  
+</script>  
+</html>  
